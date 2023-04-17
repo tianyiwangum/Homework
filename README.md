@@ -1,4 +1,4 @@
-# Homework
+# Final Project
 ### Guide For Use
 * git clone https://github.com/tianyiwangum/Homework.git
 * get data source with data_get dir, in this dir, we write some samples for fetching data from both tushare and yfinance. you can change it by yourself.
