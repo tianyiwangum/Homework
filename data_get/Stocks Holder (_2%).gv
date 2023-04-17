@@ -1,0 +1,31 @@
+digraph "Stocks Holder (>2%)" {
+	{
+		rank=same
+		AAPL [color=blue fontname="Microsoft YaHei" shape=box]
+	}
+	{
+		rank=same
+		"Vanguard Group, Inc. (The)" [color=blue fontname="Microsoft YaHei" shape=box]
+	}
+	{
+		rank=same
+		"Blackrock Inc." [color=blue fontname="Microsoft YaHei" shape=box]
+	}
+	{
+		rank=same
+		"Berkshire Hathaway, Inc" [color=blue fontname="Microsoft YaHei" shape=box]
+	}
+	{
+		rank=same
+		"State Street Corporation" [color=blue fontname="Microsoft YaHei" shape=box]
+	}
+	{
+		rank=same
+		"FMR, LLC" [color=blue fontname="Microsoft YaHei" shape=box]
+	}
+	AAPL -> "Vanguard Group, Inc. (The)" [label="8.08%" color=red fontname="Microsoft Yahei"]
+	AAPL -> "Blackrock Inc." [label="6.50%	" color=red fontname="Microsoft Yahei"]
+	AAPL -> "Berkshire Hathaway, Inc" [label="5.66%" color=red fontname="Microsoft Yahei"]
+	AAPL -> "State Street Corporation" [label="3.71%" color=red fontname="Microsoft Yahei"]
+	AAPL -> "FMR, LLC" [label="2.03%" color=red fontname="Microsoft Yahei"]
+}

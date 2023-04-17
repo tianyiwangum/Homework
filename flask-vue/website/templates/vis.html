@@ -1,0 +1,51 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    {{ bootstrap.load_css() }}
+    {% from 'bootstrap/form.html' import render_form  %}
+</head>
+<body>
+    <p>Hello, {{ name }}!</p>
+    <p>Input your info!</p>
+    <main class="container">
+        {{ render_form(form=form, form_type="basic") }}
+        {{ bootstrap.load_js() }}
+    </main>
+    <h1>{{ title }}</h1>
+    <div id="line-chart" style="width: 600px; height: 400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('line-chart'));
+        var option = {{ option|tojson }};
+        myChart.setOption(option);
+    </script>
+
+    <!-- 图片标签 -->
+    <img id="treeImage" src="../static/tree.png" alt="Stocks Holders" style="width: 1280px; height: 720px;">
+    <br>
+    <!-- 开关按钮 -->
+    <label for="toggleSwitch">Show/Hide Stocks Holders Graph</label>
+    <input type="checkbox" id="toggleSwitch">
+    <script>
+        // 获取开关按钮和图片标签的引用
+        var toggleSwitch = document.getElementById('toggleSwitch');
+        var myImage = document.getElementById('treeImage');
+
+        // 设置开关按钮的事件监听器
+        toggleSwitch.addEventListener('change', function() {
+        if (toggleSwitch.checked) {
+            // 如果开关按钮被选中，则显示图片
+            myImage.style.display = 'block';
+        } else {
+            // 如果开关按钮未被选中，则隐藏图片
+            myImage.style.display = 'none';
+        }
+        });
+    </script>
+    
+    
+</body>
+</html>
+
