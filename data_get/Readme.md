@@ -1,4 +1,4 @@
-### data structture of tree
+### data structure of tree
 the data structute is descibed in check_point.ipynb. and then it generates a tree.png in current dir. If you want to generate a json file, you can follow the folloing code.
 
 code:
